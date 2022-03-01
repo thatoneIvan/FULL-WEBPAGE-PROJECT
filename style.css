@@ -1,0 +1,261 @@
+/*  Google Font insert */
+@import url('https://fonts.googleapis.com/css2?family=Cuprum:wght@400;700&display=swap');
+
+/* Basic Style */
+body {
+    font-family: 'Cuprum', sans-serif;
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+    line-height: 1.5;
+    background-color: #f4f4f4; 
+}
+
+.container{
+width: 80%;
+margin: auto;
+/* The overflow property determines what to do if content overflows an element/s box . setting overflow to hidden will hide/clip the over flowing content */
+/* overflow: hidden; */
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+.btn-1 {
+    height: 38px;
+    background-color: #eb4442;
+    border: 0;
+    padding-left: 20px;
+    /* another example is padding: 0 20pc 0 20px */
+    padding-right: 20px;
+    color: white;
+}
+
+.light , .dark {
+    padding: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.light {
+    background-color: #e6e6e6;
+    color: #2d2b2e;
+
+}
+
+.dark{
+    background-color: #2d2b2e;
+    color: #e6e6e6;
+}
+
+/* Header */
+header {
+    background-color: #2d2b2e;
+    color: #e6e6e6;
+    /* Setting min-height so the height for the header section can expand if needed */
+    min-height: 70px;
+    border-bottom: 3px solid #eb4442;
+    padding: 5px 0;
+    /* Margin outside border , padding inside border */
+
+/* MBPC (Outside - IN) Margin,  Border, Padding , Content */
+}
+
+header > .container {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+header ul {
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+}
+
+header li{
+    list-style: none;
+    padding: 0 20px;
+
+}
+
+header a{
+    color:#e6e6e6;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+
+}
+
+#highlight, #current a{
+    color: #eb4442;
+    font-weight: 700;
+    /* font-weight :bold */
+}
+
+/* Specificity battle*/
+#current a:hover{ 
+    color: #ccc;
+    font-weight: bold;
+
+}
+
+/* Showcase */
+#showcase {
+    min-height: 400px;
+    background-image: url("images/laptop.png");
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    justify-content: center ;
+    color: #fff;
+}
+
+#showcase h1{
+margin-top: 100px;
+margin-bottom: 10px;
+font-size: 55px;
+align-self: center;
+}
+
+#showcase p {
+    font-size: 30px;
+
+
+}
+
+/* Newsletter */
+#newsletter {
+    background-color: #2d2b2e;
+    padding: 15px;
+    color: #e6e6e6;
+}
+
+#newsletter > .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#newsletter input {
+padding:  4px;
+height: 25px;
+width: 25px;
+
+}
+
+/* Boxes */
+#boxes {
+    margin-top: 20px;
+}
+
+/* > = DIRECT child */
+#boxes > .container{
+
+    display:flex;
+    justify-content:space-between;
+}
+
+.box{
+    width: 30%;
+    text-align: center;
+    padding: 10px;
+
+}
+
+i{
+    font-size: 225px;
+
+}
+
+.fa-html5{
+    color:#d45632      
+}
+
+.fa-css3-alt{
+    color: #2d50dc
+}
+
+.fa-js{
+    color: #f7e017;
+}
+
+
+/* About */
+#about{
+    background-color: #2d2b3e;
+    padding: 20px;
+}
+
+#about > .container{
+    /* > = Direct child */
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid column-gap: 50px;
+}
+
+#about .main-col{
+    color: #fff;
+}
+
+#about .sidebar {
+    margin-top: 10px;
+}
+
+/* services */
+#services > .container{
+display: grid;
+grid-template-columns: 2fr 1fr;
+grid-template-rows: 50px;
+}
+
+#services li{
+    border: 1px solid #ccc;
+    padding: 20px;  
+    margin-bottom: 5px;
+
+}
+#services .sidebar {
+    margin-top: 10px;
+    margin-bottom: 10pxbv ;
+
+}
+
+#services input, #services textarea{
+    padding: 5px;
+    width: 90%;
+}
+    
+/* footer */
+footer{
+background-color: #2d2b2e;
+color: #e6e6e6;
+padding: 20px;
+text-align: center;
+margin-top: 20px;
+}
+
+/* Media Queries */
+@media (max-width:768px){
+    header > .container, #newsletter > .container, #boxes > .container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    #showcase .container{
+        padding-bottom: 50px;
+        
+    }
+    .box {
+        width: 80%;
+    }
+    
+}
+
+#about  > .container, #services > .container {
+    grid: template columns 1fr;
+
